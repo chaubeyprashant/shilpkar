@@ -1,0 +1,35 @@
+.footer {
+    padding: 40px 0;
+    background: var(--bg-dark);
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-content p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.footer-logo {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--accent-gold);
+    letter-spacing: 2px;
+}
+
+.footer-socials a {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.footer-socials a:hover {
+    color: var(--accent-gold);
+}
