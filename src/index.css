@@ -1,15 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-  --bg-dark: #1a1a1a;
-  --bg-grid: #242424;
+  --bg-dark: #0f0f0f;
+  --bg-grid: #1a1a1a;
+  --bg-elevated: #242424;
   --text-primary: #f5f5f5;
-  --text-secondary: #a0a0a0;
+  --text-secondary: #9ca3af;
   --accent-gold: #d4af37;
-  --accent-gold-hover: #b8962e;
-  --glass-bg: rgba(26, 26, 26, 0.8);
-  --font-heading: 'Playfair Display', serif;
+  --accent-gold-soft: rgba(212, 175, 55, 0.15);
+  --accent-gold-hover: #e5c44a;
+  --glass-bg: rgba(15, 15, 15, 0.85);
+  --font-heading: 'Cormorant Garamond', serif;
   --font-body: 'Inter', sans-serif;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 40px rgba(212, 175, 55, 0.08);
+  --transition-smooth: 0.5s var(--ease-out-expo);
+  --transition-quick: 0.3s var(--ease-out-quart);
 }
 
 * {
@@ -61,18 +69,112 @@ ul {
   background: var(--accent-gold-hover);
 }
 
-/* Utility Animations */
+/* Premium keyframes */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes lineReveal {
+  from { transform: scaleX(0); transform-origin: left; }
+  to { transform: scaleX(1); transform-origin: left; }
+}
+
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-2%, -2%); }
+  20% { transform: translate(2%, 2%); }
+  30% { transform: translate(-2%, 2%); }
+  40% { transform: translate(2%, -2%); }
+  50% { transform: translate(-2%, 0); }
+  60% { transform: translate(2%, 0); }
+  70% { transform: translate(0, -2%); }
+  80% { transform: translate(0, 2%); }
+  90% { transform: translate(-2%, -2%); }
+}
+
 .fade-in {
-  animation: fadeIn 1s ease forwards;
+  animation: fadeIn 1s var(--ease-out-expo) forwards;
+}
+
+/* Scroll-triggered reveal (use with .reveal and .in-view on section) */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-6 { transition-delay: 0.6s; }
+.reveal-delay-7 { transition-delay: 0.7s; }
+.reveal-delay-8 { transition-delay: 0.8s; }
+.reveal-delay-9 { transition-delay: 0.9s; }
+.reveal-delay-10 { transition-delay: 1s; }
+
+/* Grain overlay for premium texture */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  animation: grain 8s steps(10) infinite;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: 56px;
+  color: var(--accent-gold);
+  text-align: center;
+  letter-spacing: 0.02em;
 }
 
 .section-padding {
   padding: 100px 10%;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @media (max-width: 768px) {

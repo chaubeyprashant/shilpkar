@@ -10,6 +10,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <div className="grain-overlay" aria-hidden="true" />
       <Navbar />
       <main>
         <Hero />
