@@ -3,49 +3,67 @@ import './Navbar.css';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [hidden, setHidden] = useState(false);
-  const [mounted, setMounted] = useState(false);
-  const lastScrollY = React.useRef(0);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const y = window.scrollY;
-      setScrolled(y > 60);
-      if (y > 120) {
-        setHidden(y > lastScrollY.current);
-      } else {
-        setHidden(false);
-      }
-      lastScrollY.current = y;
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
-    { href: '#home', label: 'Home' },
+  const navItems = [
+    { href: '#gallery', label: 'Shop Artworks' },
+    { href: '#artforms', label: 'Artforms' },
+    { href: '#workshops', label: 'Workshops' },
     { href: '#about', label: 'About' },
-    { href: '#gallery', label: 'Gallery' },
     { href: '#contact', label: 'Contact' },
   ];
 
   return (
-    <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''} ${hidden ? 'navbar--hidden' : ''} ${mounted ? 'navbar--mounted' : ''}`}>
-      <div className="nav-container">
-        <a href="#home" className="nav-logo">SHILPI PANDEY</a>
-        <ul className="nav-links">
-          {navLinks.map((link, i) => (
-            <li key={link.href} className="nav-link-wrap" style={{ transitionDelay: `${0.05 * i}s` }}>
-              <a href={link.href} className="nav-link">{link.label}</a>
+    <header className={`header ${scrolled ? 'header--scrolled' : ''}`}>
+      <nav className="navbar">
+        <div className="nav-container">
+          <button
+            type="button"
+            className="nav-burger"
+            aria-label="Menu"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+
+          <ul className={`nav-links nav-links--left ${menuOpen ? 'nav-links--open' : ''}`}>
+            {navItems.slice(0, 3).map((item) => (
+              <li key={item.href}>
+                <a href={item.href} onClick={() => setMenuOpen(false)}>{item.label}</a>
+              </li>
+            ))}
+          </ul>
+
+          <a href="#home" className="nav-logo">SHILPI PANDEY</a>
+
+          <ul className={`nav-links nav-links--right ${menuOpen ? 'nav-links--open' : ''}`}>
+            {navItems.slice(3).map((item) => (
+              <li key={item.href}>
+                <a href={item.href} onClick={() => setMenuOpen(false)}>{item.label}</a>
+              </li>
+            ))}
+            <li>
+              <a href="#contact" className="nav-cart" aria-label="Inquire">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                  <line x1="3" y1="6" x2="21" y2="6" />
+                  <path d="M16 10a4 4 0 0 1-8 0" />
+                </svg>
+                <span>Inquire</span>
+              </a>
             </li>
-          ))}
-        </ul>
-      </div>
-    </nav>
+          </ul>
+        </div>
+      </nav>
+    </header>
   );
 };
 

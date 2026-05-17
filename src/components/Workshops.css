@@ -1,0 +1,76 @@
+.workshops {
+  background: var(--bg-page);
+}
+
+.workshops__scroll {
+  overflow-x: auto;
+  margin: 0 -5%;
+  padding: 8px 5% 24px;
+}
+
+.workshops__track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+}
+
+.workshop-card {
+  flex: 0 0 280px;
+  background: var(--bg-card);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-quick), box-shadow var(--transition-quick);
+}
+
+.workshop-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.workshop-card img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+}
+
+.workshop-card__body {
+  padding: 16px;
+}
+
+.workshop-card__body h3 {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
+.workshop-card__body p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.workshop-card__price {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.workshop-card__btn {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--text-primary);
+  background: transparent;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--transition-quick), color var(--transition-quick);
+}
+
+.workshop-card__btn:hover {
+  background: var(--text-primary);
+  color: #fff;
+}

@@ -1,0 +1,31 @@
+.popular-themes {
+  background: var(--bg-page);
+}
+
+.section-heading--left {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.popular-themes__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.popular-themes__pill {
+  padding: 10px 20px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  border-radius: 100px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all var(--transition-quick);
+}
+
+.popular-themes__pill:hover,
+.popular-themes__pill--active {
+  background: var(--text-primary);
+  color: #fff;
+  border-color: var(--text-primary);
+}

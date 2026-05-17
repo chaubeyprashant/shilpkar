@@ -1,8 +1,17 @@
 import React from 'react';
+import PromoBanner from './components/PromoBanner';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
+import HeroCarousel from './components/HeroCarousel';
+import QuickCategories from './components/QuickCategories';
+import EditorsPick from './components/EditorsPick';
+import PopularThemes from './components/PopularThemes';
+import ArtformsGrid from './components/ArtformsGrid';
+import ShopByPrice from './components/ShopByPrice';
+import CustomerHomes from './components/CustomerHomes';
 import About from './components/About';
-import Gallery from './components/Gallery';
+import Workshops from './components/Workshops';
+import Stats from './components/Stats';
+import TrustStrip from './components/TrustStrip';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.css';
@@ -10,12 +19,20 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <div className="grain-overlay" aria-hidden="true" />
+      <PromoBanner />
       <Navbar />
       <main>
-        <Hero />
+        <HeroCarousel />
+        <QuickCategories />
+        <EditorsPick />
+        <PopularThemes />
+        <ArtformsGrid />
+        <ShopByPrice />
+        <CustomerHomes />
         <About />
-        <Gallery />
+        <Workshops />
+        <Stats />
+        <TrustStrip />
         <Contact />
       </main>
       <Footer />

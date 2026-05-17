@@ -1,32 +1,31 @@
 import React from 'react';
 import { useInView } from '../hooks/useInView';
+import { IMAGES } from '../data/images';
+import SafeImage from './SafeImage';
 import './About.css';
 
 const About = () => {
-  const [sectionRef, inView] = useInView({ rootMargin: '0px 0px -60px 0px' });
+  const [ref, inView] = useInView();
 
   return (
-    <section id="about" className="about-section section-padding" ref={sectionRef}>
-      <div className="container">
-        <h2 className={`section-title reveal ${inView ? 'in-view' : ''}`}>The Artist's Journey</h2>
-        <div className="about-grid">
-          <div className={`about-text reveal reveal-delay-2 ${inView ? 'in-view' : ''}`}>
-            <p>
-              With over 10 years of professional experience, Shilpi Pandey is a visionary artist dedicated to capturing the essence of spirituality and tradition. Her work is a fusion of ancient Indian techniques and modern creative expression.
-            </p>
-            <p>
-              From the intricate patterns of Mandalas and Lipan Art to the divine scenes of traditional Indian paintings like Madhubani and Pichwai, Shilpi's portfolio is a testament to her versatile talent and deep cultural roots.
-            </p>
-            <div className="experience-badge">
-              <span>10+</span>
-              <p>Years of Artistry</p>
-            </div>
-          </div>
-          <div className={`about-image reveal reveal-delay-4 ${inView ? 'in-view' : ''}`}>
-            <div className="image-frame">
-              <img src="https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?auto=format&fit=crop&q=80&w=1000" alt="Artist at work" />
-            </div>
-          </div>
+    <section id="about" className="featured-artist section-block" ref={ref}>
+      <div className="container featured-artist__inner">
+        <div className={`featured-artist__content reveal ${inView ? 'in-view' : ''}`}>
+          <h2 className="section-heading section-heading--left">Featured Artist</h2>
+          <h3 className="featured-artist__name">Shilpi Pandey</h3>
+          <p>
+            With over 10 years of professional experience, Shilpi Pandey is a visionary artist dedicated to
+            capturing the essence of spirituality and tradition. Her work fuses ancient Indian techniques—Mandalas,
+            Lipan Art, Madhubani, Pichwai, and Resin Art—with contemporary creative expression.
+          </p>
+          <p>
+            From glossy resin coasters and fluid wall panels to intricate devotional compositions, each piece reflects
+            deep cultural roots and a commitment to preserving India&apos;s artistic heritage for collectors worldwide.
+          </p>
+          <a href="#gallery" className="featured-artist__cta">Explore Collection</a>
+        </div>
+        <div className={`featured-artist__visual reveal reveal-delay-3 ${inView ? 'in-view' : ''}`}>
+          <SafeImage src={IMAGES.artist} alt="Shilpi Pandey at work" />
         </div>
       </div>
     </section>

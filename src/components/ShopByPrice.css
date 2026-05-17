@@ -1,0 +1,37 @@
+.shop-price {
+  background: var(--bg-page);
+}
+
+.shop-price__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+.shop-price__tile {
+  padding: 24px 16px;
+  text-align: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background var(--transition-quick), color var(--transition-quick), border-color var(--transition-quick);
+}
+
+.shop-price__tile:hover {
+  background: var(--text-primary);
+  color: #fff;
+  border-color: var(--text-primary);
+}
+
+@media (max-width: 900px) {
+  .shop-price__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .shop-price__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

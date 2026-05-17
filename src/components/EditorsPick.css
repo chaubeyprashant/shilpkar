@@ -1,0 +1,45 @@
+.editors-pick {
+  background: var(--bg-soft);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.section-subheading {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.product-scroll {
+  overflow-x: auto;
+  margin: 0 -5%;
+  padding: 8px 5% 24px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.product-scroll__track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  padding-bottom: 8px;
+}
+
+.product-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.product-scroll::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
