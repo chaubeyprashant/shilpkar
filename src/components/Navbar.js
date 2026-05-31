@@ -42,7 +42,7 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <a href="#home" className="nav-logo">SHILPI PANDEY</a>
+          <a href="#home" className="nav-logo">ARTSDIVINE</a>
 
           <ul className={`nav-links nav-links--right ${menuOpen ? 'nav-links--open' : ''}`}>
             {navItems.slice(3).map((item) => (

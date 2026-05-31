@@ -13,7 +13,7 @@ const EditorsPick = () => {
       <div className="container">
         <div className={`section-header reveal ${inView ? 'in-view' : ''}`}>
           <h2 className="section-heading">Editor&apos;s Pick</h2>
-          <p className="section-subheading">Handpainted, Resin & Traditional · Curated by Shilpi Pandey</p>
+          <p className="section-subheading">Handpainted, Resin & Traditional · Curated by artsdivine</p>
         </div>
         <div className={`product-scroll reveal reveal-delay-2 ${inView ? 'in-view' : ''}`}>
           <div className="product-scroll__track">

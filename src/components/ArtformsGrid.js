@@ -12,7 +12,7 @@ const ArtformsGrid = () => {
       <div className="container">
         <div className={`section-header reveal ${inView ? 'in-view' : ''}`}>
           <h2 className="section-heading">Shop Authentic Indian Art</h2>
-          <p className="section-subheading">Explore traditional artforms by Shilpi Pandey</p>
+          <p className="section-subheading">Explore traditional artforms by artsdivine</p>
         </div>
         <div className="artforms__grid">
           {artforms.map((item, i) => (

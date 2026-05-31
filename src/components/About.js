@@ -12,10 +12,10 @@ const About = () => {
       <div className="container featured-artist__inner">
         <div className={`featured-artist__content reveal ${inView ? 'in-view' : ''}`}>
           <h2 className="section-heading section-heading--left">Featured Artist</h2>
-          <h3 className="featured-artist__name">Shilpi Pandey</h3>
+          <h3 className="featured-artist__name">artsdivine</h3>
           <p>
-            With over 10 years of professional experience, Shilpi Pandey is a visionary artist dedicated to
-            capturing the essence of spirituality and tradition. Her work fuses ancient Indian techniques—Mandalas,
+            With over 10 years of professional experience, artsdivine is a visionary art studio dedicated to
+            capturing the essence of spirituality and tradition. The studio fuses ancient Indian techniques—Mandalas,
             Lipan Art, Madhubani, Pichwai, and Resin Art—with contemporary creative expression.
           </p>
           <p>
@@ -25,7 +25,7 @@ const About = () => {
           <a href="#gallery" className="featured-artist__cta">Explore Collection</a>
         </div>
         <div className={`featured-artist__visual reveal reveal-delay-3 ${inView ? 'in-view' : ''}`}>
-          <SafeImage src={IMAGES.artist} alt="Shilpi Pandey at work" />
+          <SafeImage src={IMAGES.artist} alt="artsdivine at work" />
         </div>
       </div>
     </section>

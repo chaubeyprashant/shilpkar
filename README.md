@@ -68,3 +68,35 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Enquiry Form Email Setup (Web3Forms Free)
+
+The contact form uses [Web3Forms](https://web3forms.com/) free tier.
+No backend/server function is required.
+
+### 1) Create free Web3Forms key
+
+- Go to [https://web3forms.com/](https://web3forms.com/)
+- Enter your email (`divinearts134@gmail.com`) and get Access Key
+
+### 2) Add key in `.env`
+
+Create `.env` in project root:
+
+```bash
+REACT_APP_WEB3FORMS_ACCESS_KEY=your_access_key_here
+```
+
+Restart dev server or redeploy after adding env.
+
+### 3) Verify
+
+- Submit the contact form
+- You should receive enquiry emails at `divinearts134@gmail.com`
+
+### Common issues
+
+- `Web3Forms key is missing`:
+  `REACT_APP_WEB3FORMS_ACCESS_KEY` is not set in environment.
+- `Failed to submit enquiry`:
+  key is invalid or Web3Forms rejected payload.

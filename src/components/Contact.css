@@ -59,6 +59,13 @@
   transition: border-color var(--transition-quick), box-shadow var(--transition-quick);
 }
 
+.contact-form__honeypot {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
@@ -69,7 +76,7 @@
 
 .btn-submit {
   padding: 16px 32px;
-  background: var(--text-primary);
+  background: linear-gradient(90deg, #ff6f61 0%, #ff9850 100%);
   color: #fff;
   border: none;
   font-size: 0.85rem;
@@ -81,8 +88,27 @@
   transition: opacity var(--transition-quick);
 }
 
+.btn-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
 .btn-submit:hover {
-  opacity: 0.88;
+  opacity: 0.92;
+}
+
+.form-status {
+  margin: 4px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.form-status--success {
+  color: #1e7b36;
+}
+
+.form-status--error {
+  color: #a52020;
 }
 
 @media (max-width: 768px) {

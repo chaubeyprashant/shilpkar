@@ -1,5 +1,5 @@
 .stats {
-  background: var(--text-primary);
+  background: linear-gradient(135deg, #4f2f74 0%, #7a49a6 45%, #ff8f57 100%);
   color: #fff;
   text-align: center;
 }

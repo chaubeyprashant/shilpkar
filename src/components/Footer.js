@@ -27,7 +27,7 @@ const Footer = () => (
       <div className="footer__col">
         <h4>Explore</h4>
         <ul>
-          <li><a href="#about">About Shilpi</a></li>
+          <li><a href="#about">About artsdivine</a></li>
           <li><a href="#workshops">Workshops</a></li>
           <li><a href="#homes">In Your Homes</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -35,20 +35,25 @@ const Footer = () => (
       </div>
       <div className="footer__col footer__col--contact">
         <h4>Contact</h4>
-        <p><strong>Email</strong><br />artist@shilpipandey.com</p>
+        <p><strong>Email</strong><br />divinearts134@gmail.com</p>
         <p><strong>Commissions</strong><br />Resin art · Paintings · Lipan art</p>
+        <p>
+          <strong>Follow</strong><br />
+          <a href="https://www.instagram.com/artsdivine107/" target="_blank" rel="noreferrer">Instagram</a> ·{' '}
+          <a href="https://www.facebook.com/share/14cUZT2wkQt/" target="_blank" rel="noreferrer">Facebook</a>
+        </p>
       </div>
     </div>
     <div className="footer__bottom">
       <div className="container footer__bottom-inner">
-        <p>&copy; {new Date().getFullYear()} Shilpi Pandey Art. All rights reserved.</p>
-        <span className="footer__brand">SHILPI PANDEY</span>
+        <p>&copy; {new Date().getFullYear()} artsdivine. All rights reserved.</p>
+        <span className="footer__brand">ARTSDIVINE</span>
         <a href="#home">Back to Top</a>
       </div>
     </div>
     <div className="footer__about container">
       <p>
-        Shilpi Pandey brings divinity and culture to life through 10+ years of artistic excellence—specializing in
+        artsdivine brings divinity and culture to life through 10+ years of artistic excellence—specializing in
         spiritual art, resin art, traditional Indian styles, and contemporary masterpieces for collectors worldwide.
       </p>
     </div>

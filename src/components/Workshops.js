@@ -12,7 +12,7 @@ const Workshops = () => {
       <div className="container">
         <div className={`section-header reveal ${inView ? 'in-view' : ''}`}>
           <h2 className="section-heading">Learn Indian Artforms</h2>
-          <p className="section-subheading">On-demand masterclasses with Shilpi Pandey</p>
+          <p className="section-subheading">On-demand masterclasses with artsdivine</p>
         </div>
         <div className={`workshops__scroll reveal reveal-delay-2 ${inView ? 'in-view' : ''}`}>
           <div className="workshops__track">

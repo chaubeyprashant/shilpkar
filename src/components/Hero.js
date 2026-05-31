@@ -16,7 +16,7 @@ const Hero = () => {
       </div>
       <div className={`hero-content ${mounted ? 'hero-content--visible' : ''}`}>
         <h2 className="hero-subtitle">Professional Artist</h2>
-        <h1 className="hero-title">Shilpi Pandey</h1>
+        <h1 className="hero-title">ARTSDIVINE</h1>
         <p className="hero-description">
           Bringing divinity and culture to life through 10+ years of artistic excellence.
           Specializing in Spiritual Art, Traditional Indian styles, and contemporary masterpieces.

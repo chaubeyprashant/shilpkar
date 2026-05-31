@@ -19,9 +19,9 @@
 }
 
 .shop-price__tile:hover {
-  background: var(--text-primary);
+  background: var(--accent-primary);
   color: #fff;
-  border-color: var(--text-primary);
+  border-color: var(--accent-primary);
 }
 
 @media (max-width: 900px) {

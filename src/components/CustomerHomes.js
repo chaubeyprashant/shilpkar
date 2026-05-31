@@ -11,7 +11,7 @@ const CustomerHomes = () => {
     <section id="homes" className="customer-homes section-block" ref={ref}>
       <div className="container">
         <div className={`section-header reveal ${inView ? 'in-view' : ''}`}>
-          <h2 className="section-heading">Shilpi Pandey in Your Homes</h2>
+          <h2 className="section-heading">artsdivine in Your Homes</h2>
           <p className="section-subheading">
             See how collectors style traditional and contemporary artworks in living rooms, pooja spaces, and offices.
           </p>

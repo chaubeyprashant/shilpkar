@@ -71,7 +71,7 @@
 }
 
 .product-card__badge--ready {
-  background: var(--accent-primary);
+  background: #ff8050;
   color: #fff;
 }
 
@@ -132,9 +132,9 @@
 }
 
 .product-card__cart-btn:hover {
-  background: var(--text-primary);
+  background: var(--accent-primary);
   color: #fff;
-  border-color: var(--text-primary);
+  border-color: var(--accent-primary);
 }
 
 @media (min-width: 769px) {

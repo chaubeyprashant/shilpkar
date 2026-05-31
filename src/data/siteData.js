@@ -17,7 +17,7 @@ export const heroSlides = [
   {
     image: IMAGES.resin,
     title: 'Resin Art & Fluid Masterpieces',
-    subtitle: 'Coasters · Wall Art · Custom Commissions by Shilpi Pandey',
+    subtitle: 'Coasters · Wall Art · Custom Commissions by artsdivine',
     cta: 'Explore Resin Art',
     href: '#artforms',
   },
@@ -57,7 +57,7 @@ export const products = [
   {
     id: 1,
     title: 'Divine Krishna in Pichwai Style',
-    artist: 'Shilpi Pandey',
+    artist: 'artsdivine',
     size: '24 in × 36 in',
     status: 'Made To Order',
     price: 28000,
@@ -68,7 +68,7 @@ export const products = [
   {
     id: 2,
     title: 'Ocean Wave Resin Wall Art',
-    artist: 'Shilpi Pandey',
+    artist: 'artsdivine',
     size: '18 in × 24 in',
     status: 'Ready To Ship',
     price: 8500,
@@ -79,7 +79,7 @@ export const products = [
   {
     id: 3,
     title: 'Sacred Mandala Composition',
-    artist: 'Shilpi Pandey',
+    artist: 'artsdivine',
     size: '20 in × 20 in',
     status: 'Made To Order',
     price: 12000,
@@ -90,7 +90,7 @@ export const products = [
   {
     id: 4,
     title: 'Lipan Art Wall Panel',
-    artist: 'Shilpi Pandey',
+    artist: 'artsdivine',
     size: '18 in × 24 in',
     status: 'Made To Order',
     price: 18500,
@@ -101,7 +101,7 @@ export const products = [
   {
     id: 5,
     title: 'Madhubani Folk Narrative',
-    artist: 'Shilpi Pandey',
+    artist: 'artsdivine',
     size: '22 in × 30 in',
     status: 'Ready To Ship',
     price: 22000,
@@ -112,7 +112,7 @@ export const products = [
   {
     id: 6,
     title: 'Geode Resin Coaster Set (Set of 4)',
-    artist: 'Shilpi Pandey',
+    artist: 'artsdivine',
     size: '4 in × 4 in each',
     status: 'Ready To Ship',
     price: 3200,
@@ -123,7 +123,7 @@ export const products = [
   {
     id: 7,
     title: 'Tree of Life in Kalamkari',
-    artist: 'Shilpi Pandey',
+    artist: 'artsdivine',
     size: '30 in × 45 in',
     status: 'Made To Order',
     price: 45000,
@@ -134,7 +134,7 @@ export const products = [
   {
     id: 8,
     title: 'Floral Resin Serving Tray',
-    artist: 'Shilpi Pandey',
+    artist: 'artsdivine',
     size: '14 in × 20 in',
     status: 'Made To Order',
     price: 6500,
@@ -169,11 +169,11 @@ export const priceBrackets = [
 ];
 
 export const workshops = [
-  { title: 'Resin Art Masterclass', instructor: 'Shilpi Pandey', price: 1299, image: IMAGES.resin },
-  { title: 'Lippan Art Workshop', instructor: 'Shilpi Pandey', price: 999, image: IMAGES.craft },
-  { title: 'Madhubani Masterclass', instructor: 'Shilpi Pandey', price: 999, image: IMAGES.colorfulArt },
-  { title: 'Mandala & Spiritual Art', instructor: 'Shilpi Pandey', price: 999, image: IMAGES.mandala },
-  { title: 'Pichwai Techniques', instructor: 'Shilpi Pandey', price: 1299, image: IMAGES.painting },
+  { title: 'Resin Art Masterclass', instructor: 'artsdivine', price: 1299, image: IMAGES.resin },
+  { title: 'Lippan Art Workshop', instructor: 'artsdivine', price: 999, image: IMAGES.craft },
+  { title: 'Madhubani Masterclass', instructor: 'artsdivine', price: 999, image: IMAGES.colorfulArt },
+  { title: 'Mandala & Spiritual Art', instructor: 'artsdivine', price: 999, image: IMAGES.mandala },
+  { title: 'Pichwai Techniques', instructor: 'artsdivine', price: 1299, image: IMAGES.painting },
 ];
 
 export const stats = [

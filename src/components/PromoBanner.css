@@ -1,5 +1,5 @@
 .promo-banner {
-  background: var(--text-primary);
+  background: linear-gradient(90deg, #ff6f61 0%, #ff9850 55%, #ffb35d 100%);
   color: #fff;
   text-align: center;
   padding: 10px 16px;

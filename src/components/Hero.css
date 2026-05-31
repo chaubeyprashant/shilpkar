@@ -31,9 +31,9 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(15, 15, 15, 0.4) 0%,
-    rgba(15, 15, 15, 0.6) 50%,
-    rgba(15, 15, 15, 0.92) 100%
+    rgba(79, 47, 116, 0.22) 0%,
+    rgba(123, 73, 166, 0.42) 52%,
+    rgba(79, 47, 116, 0.64) 100%
   );
 }
 
@@ -90,6 +90,7 @@
   margin-bottom: 28px;
   line-height: 1.08;
   letter-spacing: -0.02em;
+  color: #fff;
 }
 
 .hero-description {

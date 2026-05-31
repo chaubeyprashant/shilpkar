@@ -25,7 +25,7 @@
 
 .popular-themes__pill:hover,
 .popular-themes__pill--active {
-  background: var(--text-primary);
+  background: var(--accent-primary);
   color: #fff;
-  border-color: var(--text-primary);
+  border-color: var(--accent-primary);
 }
