@@ -29,6 +29,7 @@ const Footer = () => (
         <ul>
           <li><a href="#about">About artsdivine</a></li>
           <li><a href="#workshops">Workshops</a></li>
+          <li><a href="#estimator">Price Estimator</a></li>
           <li><a href="#homes">In Your Homes</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>

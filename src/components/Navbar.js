@@ -15,6 +15,7 @@ const Navbar = () => {
     { href: '#gallery', label: 'Shop Artworks' },
     { href: '#artforms', label: 'Artforms' },
     { href: '#workshops', label: 'Workshops' },
+    { href: '#estimator', label: 'Price Estimator' },
     { href: '#about', label: 'About' },
     { href: '#contact', label: 'Contact' },
   ];
@@ -35,7 +36,7 @@ const Navbar = () => {
           </button>
 
           <ul className={`nav-links nav-links--left ${menuOpen ? 'nav-links--open' : ''}`}>
-            {navItems.slice(0, 3).map((item) => (
+            {navItems.slice(0, 2).map((item) => (
               <li key={item.href}>
                 <a href={item.href} onClick={() => setMenuOpen(false)}>{item.label}</a>
               </li>
@@ -45,7 +46,7 @@ const Navbar = () => {
           <a href="#home" className="nav-logo">ARTSDIVINE</a>
 
           <ul className={`nav-links nav-links--right ${menuOpen ? 'nav-links--open' : ''}`}>
-            {navItems.slice(3).map((item) => (
+            {navItems.slice(2).map((item) => (
               <li key={item.href}>
                 <a href={item.href} onClick={() => setMenuOpen(false)}>{item.label}</a>
               </li>

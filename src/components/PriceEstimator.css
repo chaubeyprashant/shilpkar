@@ -1,0 +1,153 @@
+.price-estimator {
+  background: var(--bg-page);
+}
+
+.price-estimator__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.price-estimator__form,
+.price-estimator__result {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-card);
+}
+
+.price-estimator__form {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.price-estimator__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.price-estimator__field span {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.price-estimator__field select {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  padding: 12px 14px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  border-radius: 4px;
+}
+
+.price-estimator__field select:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 1px var(--accent-primary);
+}
+
+.price-estimator__result {
+  padding: 32px 28px;
+  position: sticky;
+  top: 96px;
+}
+
+.price-estimator__result-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.price-estimator__result-price {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 4vw, 2.4rem);
+  font-weight: 700;
+  color: var(--accent-primary);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.price-estimator__result-note {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.price-estimator__breakdown {
+  list-style: none;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin-bottom: 20px;
+}
+
+.price-estimator__breakdown li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.price-estimator__breakdown strong {
+  color: var(--text-primary);
+  font-weight: 600;
+  text-align: right;
+}
+
+.price-estimator__highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.price-estimator__highlights span {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 6px 10px;
+  border-radius: 100px;
+  background: var(--accent-gold-soft);
+  color: var(--text-primary);
+}
+
+.price-estimator__cta {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 14px 24px;
+  background: linear-gradient(90deg, #ff6f61 0%, #ff9850 100%);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transition: opacity var(--transition-quick);
+}
+
+.price-estimator__cta:hover {
+  opacity: 0.92;
+}
+
+@media (max-width: 900px) {
+  .price-estimator__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .price-estimator__result {
+    position: static;
+  }
+}

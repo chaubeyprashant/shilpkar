@@ -10,6 +10,7 @@ import ShopByPrice from './components/ShopByPrice';
 import CustomerHomes from './components/CustomerHomes';
 import About from './components/About';
 import Workshops from './components/Workshops';
+import PriceEstimator from './components/PriceEstimator';
 import Stats from './components/Stats';
 import TrustStrip from './components/TrustStrip';
 import Contact from './components/Contact';
@@ -31,6 +32,7 @@ function App() {
         <CustomerHomes />
         <About />
         <Workshops />
+        <PriceEstimator />
         <Stats />
         <TrustStrip />
         <Contact />
