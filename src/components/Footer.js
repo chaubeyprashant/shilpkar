@@ -1,4 +1,6 @@
 import React from 'react';
+import { contactEmail } from '../data/siteData';
+import SocialLinks from './SocialLinks';
 import './Footer.css';
 
 const Footer = () => (
@@ -36,13 +38,12 @@ const Footer = () => (
       </div>
       <div className="footer__col footer__col--contact">
         <h4>Contact</h4>
-        <p><strong>Email</strong><br />divinearts134@gmail.com</p>
+        <p><strong>Email</strong><br />{contactEmail}</p>
         <p><strong>Commissions</strong><br />Resin art · Paintings · Lipan art</p>
-        <p>
-          <strong>Follow</strong><br />
-          <a href="https://www.instagram.com/artsdivine107/" target="_blank" rel="noreferrer">Instagram</a> ·{' '}
-          <a href="https://www.facebook.com/share/14cUZT2wkQt/" target="_blank" rel="noreferrer">Facebook</a>
-        </p>
+        <div className="footer__social">
+          <strong>Follow</strong>
+          <SocialLinks variant="footer" />
+        </div>
       </div>
     </div>
     <div className="footer__bottom">

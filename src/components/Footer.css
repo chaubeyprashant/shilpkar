@@ -55,6 +55,14 @@
   margin-bottom: 4px;
 }
 
+.footer__social {
+  margin-top: 8px;
+}
+
+.footer__social strong {
+  margin-bottom: 10px;
+}
+
 .footer__bottom {
   border-top: 1px solid var(--border);
   padding: 24px 0;

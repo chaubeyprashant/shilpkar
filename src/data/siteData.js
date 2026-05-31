@@ -201,3 +201,20 @@ export const customerHomes = [
 
 export const formatPrice = (n) =>
   new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(n);
+
+export const socialLinks = [
+  {
+    id: 'instagram',
+    label: 'Instagram',
+    href: 'https://www.instagram.com/artsdivine107/',
+    handle: '@artsdivine107',
+  },
+  {
+    id: 'facebook',
+    label: 'Facebook',
+    href: 'https://www.facebook.com/share/14cUZT2wkQt/',
+    handle: 'artsdivine',
+  },
+];
+
+export const contactEmail = 'divinearts134@gmail.com';

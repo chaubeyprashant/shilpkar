@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useInView } from '../hooks/useInView';
+import { contactEmail } from '../data/siteData';
+import SocialLinks from './SocialLinks';
 import './Contact.css';
 
 const initialFormState = {
@@ -107,11 +109,15 @@ const Contact = () => {
             </p>
             <div className="info-item">
               <strong>Email</strong>
-              <p>divinearts134@gmail.com</p>
+              <p>{contactEmail}</p>
             </div>
             <div className="info-item">
               <strong>Services</strong>
               <p>Resin art · Original paintings · Custom commissions · Masterclasses</p>
+            </div>
+            <div className="info-item">
+              <strong>Follow Us</strong>
+              <SocialLinks />
             </div>
           </div>
           <form

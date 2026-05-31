@@ -2,6 +2,7 @@ import React from 'react';
 import { useInView } from '../hooks/useInView';
 import { IMAGES } from '../data/images';
 import SafeImage from './SafeImage';
+import SocialLinks from './SocialLinks';
 import './About.css';
 
 const About = () => {
@@ -23,6 +24,9 @@ const About = () => {
             deep cultural roots and a commitment to preserving India&apos;s artistic heritage for collectors worldwide.
           </p>
           <a href="#gallery" className="featured-artist__cta">Explore Collection</a>
+          <div className="featured-artist__social">
+            <SocialLinks />
+          </div>
         </div>
         <div className={`featured-artist__visual reveal reveal-delay-3 ${inView ? 'in-view' : ''}`}>
           <SafeImage src={IMAGES.artist} alt="artsdivine at work" />
