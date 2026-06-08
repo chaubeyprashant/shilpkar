@@ -8,6 +8,9 @@ const unsplash = (id, w, h) =>
 const picsum = (seed, w, h) => `https://picsum.photos/seed/${seed}/${w}/${h}`;
 
 export const IMAGES = {
+  carouselArtist: `${process.env.PUBLIC_URL}/carousel/slide-1-artist.png`,
+  carouselBrand: `${process.env.PUBLIC_URL}/carousel/slide-2-brand.png`,
+  carouselHome: `${process.env.PUBLIC_URL}/carousel/slide-3-home.png`,
   painting: unsplash('1579783902614-a3fb3927b6a5', 2000, 1200),
   studio: unsplash('1547826039-bfc35e0f1ea8', 2000, 1200),
   colorfulArt: unsplash('1513364776144-60967b0f800f', 800, 1000),
@@ -19,7 +22,7 @@ export const IMAGES = {
   home2: unsplash('1616486338812-3dadae4b4ace', 600, 600),
   home3: unsplash('1615874959474-d609969a20ed', 600, 600),
   home4: unsplash('1615529328331-f8917597711f', 600, 600),
-  artist: unsplash('1547826039-bfc35e0f1ea8', 1000, 1200),
+  artist: `${process.env.PUBLIC_URL}/carousel/slide-1-artist.png`,
 };
 
 /** Fallback if primary src fails */
@@ -39,6 +42,9 @@ export const img = (key, width) => {
     home3: IMAGES.home3,
     home4: IMAGES.home4,
     artist: IMAGES.artist,
+    carouselArtist: IMAGES.carouselArtist,
+    carouselBrand: IMAGES.carouselBrand,
+    carouselHome: IMAGES.carouselHome,
   };
   const base = map[key] || IMAGES.painting;
   if (!width) return base;

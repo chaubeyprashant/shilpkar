@@ -19,21 +19,36 @@ const HeroCarousel = () => {
 
   const slide = heroSlides[active];
 
+  const overlayClass = [
+    'hero-carousel__overlay',
+    slide.lightOverlay && 'hero-carousel__overlay--light',
+    slide.overlay === 'left' && 'hero-carousel__overlay--left',
+  ].filter(Boolean).join(' ');
+
   return (
-    <section id="home" className="hero-carousel">
+    <section
+      id="home"
+      className="hero-carousel"
+      style={{ backgroundColor: slide.bgColor || '#2d1d3f' }}
+    >
       {heroSlides.map((s, i) => (
         <SafeImage
           key={i}
           src={s.image}
-          alt=""
-          className={`hero-carousel__slide ${i === active ? 'hero-carousel__slide--active' : ''}`}
+          alt={s.alt || ''}
+          className={`hero-carousel__slide ${i === active ? 'hero-carousel__slide--active' : ''} ${s.fit === 'contain' ? 'hero-carousel__slide--contain' : ''}`}
+          style={{
+            objectPosition: s.objectPosition || 'center center',
+            objectFit: s.fit || 'cover',
+          }}
+          loading={i === 0 ? 'eager' : 'lazy'}
           aria-hidden={i !== active}
         />
       ))}
-      <div className="hero-carousel__overlay" />
-      <div className="hero-carousel__content">
-        <p className="hero-carousel__subtitle">{slide.subtitle}</p>
-        <h1 className="hero-carousel__title">{slide.title}</h1>
+      <div className={overlayClass} />
+      <div className={`hero-carousel__content ${slide.lightOverlay ? 'hero-carousel__content--minimal' : ''}`}>
+        {slide.subtitle && <p className="hero-carousel__subtitle">{slide.subtitle}</p>}
+        {slide.title && <h1 className="hero-carousel__title">{slide.title}</h1>}
         <a href={slide.href} className="hero-carousel__cta">{slide.cta}</a>
       </div>
       <button type="button" className="hero-carousel__arrow hero-carousel__arrow--prev" onClick={() => go(-1)} aria-label="Previous slide">
