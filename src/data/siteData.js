@@ -25,9 +25,10 @@ export const heroSlides = [
     subtitle: '',
     cta: 'Shop Artworks',
     href: '#gallery',
-    fit: 'cover',
+    fit: 'contain',
     objectPosition: 'center center',
     lightOverlay: true,
+    bgColor: '#f7f2ea',
   },
   {
     image: IMAGES.carouselHome,

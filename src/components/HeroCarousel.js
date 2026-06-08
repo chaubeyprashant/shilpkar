@@ -41,7 +41,9 @@ const HeroCarousel = () => {
             objectPosition: s.objectPosition || 'center center',
             objectFit: s.fit || 'cover',
           }}
-          loading={i === 0 ? 'eager' : 'lazy'}
+          loading="eager"
+          fetchPriority={i === 0 ? 'high' : 'auto'}
+          decoding="async"
           aria-hidden={i !== active}
         />
       ))}
